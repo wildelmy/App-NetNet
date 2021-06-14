@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <title>NetNet</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="./index.html">NetNet</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <figure class="figure">
+            <img id="poster" class="figure-img img-fluid rounded" alt="Película">
+          </figure>
+        </div>
+        <div class="col-12">
+          <div class="mb-3">
+            <h2 id="title"></h2>
+            <span id="released"></span>
+          </div>
+          <div class="mb-3">
+            <h3>Duration</h3>
+            <p id="duration"></p>
+          </div>
+          <div class="mb-3">
+            <h3>Trama</h3>
+            <p id="plot"></p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn" type="button" onClick="openModal()">Comprar película</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirma suscripción</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+              onClick="closeModal()"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row g-3 d-flex justify-content-center text-dark">
+              <div class="col-auto">
+                <label for="emial">Nombre de usuario</label>
+                <input type="email" class="form-control" id="user">
+              </div>
+              <div class="col-auto">
+                <button id="btn-save-user" type="submit" class="btn mb-3">Confirmar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/movieInfo.js"></script>
+</body>
+
+</html>

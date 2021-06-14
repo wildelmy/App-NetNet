@@ -1,0 +1,33 @@
+body {
+  padding-bottom: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+nav {
+  background-color: red !important;
+  position: sticky !important;
+  top: 0;
+}
+button {
+  background-color: red !important;
+  color: #fff !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+#movies {
+  display: flex;
+  overflow-x: auto;
+}
+#movies .card {
+  max-width: 13rem;
+  min-width: 13rem;
+  margin: 0 10px;
+  min-height: 10rem;
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.418);
+}
