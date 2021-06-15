@@ -5,7 +5,7 @@ const initialSearch = "Batman"
 btnSearch.addEventListener('click', getMoviesBySearch) 
 
 async function getMovies() {
-  let response = await fetch(`http://www.omdbapi.com/?s=${initialSearch}&page=1&apikey=2499b840`);
+  let response = await fetch(`https://www.omdbapi.com/?s=${initialSearch}&page=1&apikey=2499b840`);
   let data = await response.json();
   fillMovies(data);
 }
@@ -14,7 +14,7 @@ getMovies();
 
 async function getMoviesBySearch() {
   let searchValue = inputSearch.value.trim()
-  let response = await fetch(`http://www.omdbapi.com/?s=${searchValue}&page=1&apikey=2499b840`);
+  let response = await fetch(`https://www.omdbapi.com/?s=${searchValue}&page=1&apikey=2499b840`);
   let data = await response.json();
   fillMovies(data);
 }
