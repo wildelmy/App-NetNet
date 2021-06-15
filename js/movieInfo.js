@@ -10,7 +10,7 @@ async function getMovieInfo() {
   let url = window.location;
   let movieId = url.search.split("=")[1];
   let response = await fetch(
-    `http://www.omdbapi.com/?i=${movieId}&apikey=2499b840`
+    `https://www.omdbapi.com/?i=${movieId}&apikey=2499b840`
   );
   let data = await response.json();
   movie = data;
