@@ -31,6 +31,7 @@ function fillMovies(data) {
   //obtiene elemento contenedor de peliculas
   let moviesContainer = document.getElementById("moviesContainer");
   let movies = data.Search; //array de peliculas
+  moviesContainer.innerHTML = "";
   for (let i = 0; i < movies.length; i++) {
     //agrega un link por cada pelicula
     // con el id de la pelicula para obtenerlo en movieInfo.html
