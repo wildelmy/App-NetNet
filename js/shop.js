@@ -1,8 +1,10 @@
 const shopContainer = document.getElementById("shop");
 
+getMyMovies();
 function getMyMovies() {
   let user = window.localStorage.getItem("user");
   if (user) {
+    // obtiene peliculas guardas en localStorage
     user = JSON.parse(user);
     let movies = user.movies;
     shopContainer.innerHTML = "";
@@ -21,21 +23,22 @@ function getMyMovies() {
     });
     activeDeleteButtons();
   } else {
+    // envía al index si no hay usuario
     window.location.href = "index.html";
   }
 }
-getMyMovies();
 
 function activeDeleteButtons() {
-  let btns = document.querySelectorAll(".delete-movie");
+  // agrega evento de click a cada boton de borrar
+  let btns = document.querySelectorAll(".delete-movie"); // lista de botones eliminar
   btns.forEach(function (el, index) {
     el.addEventListener("click", function () {
-      let user = window.localStorage.getItem("user");
+      let user = window.localStorage.getItem("user"); // usuario de localStorage
       user = JSON.parse(user);
-      let movies = user.movies;
-      movies.splice(index, 1);
+      let movies = user.movies; // peliculas guardadas
+      movies.splice(index, 1); // elimina elemento del array
       window.localStorage.setItem("user", JSON.stringify(user));
-      getMyMovies();
+      getMyMovies(); // actualiza lista
     });
   });
 }
