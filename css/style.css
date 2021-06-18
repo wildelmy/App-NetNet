@@ -8,6 +8,7 @@ nav {
   background-color: red !important;
   position: sticky !important;
   top: 0;
+  z-index: 100;
 }
 button {
   background-color: red !important;
@@ -18,11 +19,11 @@ a {
   text-decoration: none;
 }
 
-#movies {
+#moviesContainer {
   display: flex;
   overflow-x: auto;
 }
-#movies .card {
+#moviesContainer .card {
   max-width: 13rem;
   min-width: 13rem;
   margin: 0 10px;
