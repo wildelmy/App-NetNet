@@ -44,7 +44,6 @@ function fillMovies(data) {
           <span>${movies[i].Year}</span>
         </div>
       </div>
-    </a>
-    `;
+    </a>`;
   }
 }
